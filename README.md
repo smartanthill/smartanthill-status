@@ -1,2 +1,2 @@
-# smartanthill-embedded-status
-Misc status information about SmartAnthill Embedded Project
+# smartanthill-status
+Misc status information about SmartAnthill Project
