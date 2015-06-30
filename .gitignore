@@ -1,0 +1,7 @@
+.idea/
+smartanthill_status.egg-info
+dist/
+.cache/
+.coverage
+*.pyc
+.tox/

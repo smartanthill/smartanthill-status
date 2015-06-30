@@ -1,0 +1,194 @@
+[Tue Jun 23 14:36:47 2015] Processing [36m[1mmsp430[0m (platform: timsp430, build_flags: -D SA_PLATFORM_WIRING, src_filter: +<*> -<hal/platforms> +<hal/platforms/wiring>, board: lpmsp430g2553, framework: energia)
+[1m--------------------------------------------------------------------------------[0m
+Installing [36mtoolchain-timsp430[0m package:
+Downloading...
+Unpacking...
+Installing [36mtool-mspdebug[0m package:
+Downloading...
+Unpacking...
+Installing [36mframework-energiamsp430[0m package:
+Downloading...
+Unpacking...
+Installing [36mframework-arduinomsp430[0m package:
+Downloading...
+Unpacking...
+[32mThe platform 'timsp430' has been successfully installed![0m
+msp430-gcc -o .pioenvs/msp430/src/common/sa_aes_128.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/sa_aes_128.c[0m
+[33mIn file included from src/common/sa_aes_128.c:18:0:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_aes_128.c:20:1: warning: 'progmem' attribute directive ignored [-Wattributes][0m
+msp430-gcc -o .pioenvs/msp430/src/common/sa_eax_128.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/sa_eax_128.c[0m
+[33mIn file included from src/common/sa_eax_128.h:19:0,[0m
+[33mfrom src/common/sa_eax_128.c:19:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/common/sa_eeprom.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/sa_eeprom.c[0m
+[33mIn file included from src/common/sa_eeprom.h:21:0,[0m
+[33mfrom src/common/sa_eeprom.c:18:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_eeprom.c:41:1: warning: 'progmem' attribute directive ignored [-Wattributes][0m
+[33msrc/common/sa_eeprom.c: In function 'format_eeprom_at_lifestart':[0m
+[33msrc/common/sa_eeprom.c:58:35: warning: initialization discards 'const' qualifier from pointer target type [enabled by default][0m
+msp430-gcc -o .pioenvs/msp430/src/common/saccp_protocol.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/saccp_protocol.c[0m
+[33mIn file included from src/common/saccp_protocol.h:22:0,[0m
+[33mfrom src/common/saccp_protocol.c:19:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+[33msrc/common/saccp_protocol.c: In function 'handler_zepto_vm':[0m
+[33msrc/common/saccp_protocol.c:188:5: warning: passing argument 2 of 'zepto_parser_decode_uint' from incompatible pointer type [enabled by default][0m
+[33msrc/common/zepto_mem_mngmt.h:107:6: note: expected 'uint8_t *' but argument is of type 'uint32_t *'[0m
+msp430-gcc -o .pioenvs/msp430/src/common/sagdp_protocol.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/sagdp_protocol.c[0m
+[33mIn file included from src/common/sagdp_protocol.h:22:0,[0m
+[33mfrom src/common/sagdp_protocol.c:18:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/common/saoudp_protocol.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/saoudp_protocol.c[0m
+[33mIn file included from src/common/saoudp_protocol.h:22:0,[0m
+[33mfrom src/common/saoudp_protocol.c:19:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/common/sasp_protocol.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/sasp_protocol.c[0m
+[33mIn file included from src/common/sasp_protocol.h:21:0,[0m
+[33mfrom src/common/sasp_protocol.c:19:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/common/zepto_big_num.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/zepto_big_num.c[0m
+[33mIn file included from src/common/zepto_big_num.c:19:0:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/common/zepto_mem_mngmt.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/common/zepto_mem_mngmt.c[0m
+[33mIn file included from src/common/zepto_mem_mngmt_base.h:21:0,[0m
+[33mfrom src/common/zepto_mem_mngmt.h:21,[0m
+[33mfrom src/common/zepto_mem_mngmt.c:18:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-g++ -o .pioenvs/msp430/src/hal/platforms/wiring/hal_commlayer.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/hal/platforms/wiring/hal_commlayer.cpp[0m
+[33mIn file included from src/hal/platforms/wiring/../../hal_commlayer.h:21:0,[0m
+[33mfrom src/hal/platforms/wiring/hal_commlayer.cpp:18:[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-g++ -o .pioenvs/msp430/src/hal/platforms/wiring/hal_eeprom.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/hal/platforms/wiring/hal_eeprom.cpp[0m
+[33mIn file included from src/hal/platforms/wiring/../../hal_eeprom.h:21:0,[0m
+[33mfrom src/hal/platforms/wiring/hal_eeprom.cpp:18:[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-g++ -o .pioenvs/msp430/src/hal/platforms/wiring/hal_main.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/hal/platforms/wiring/hal_main.cpp[0m
+[33mIn file included from src/hal/platforms/wiring/../../../sa_main.h:21:0,[0m
+[33mfrom src/hal/platforms/wiring/hal_main.cpp:18:[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-g++ -o .pioenvs/msp430/src/hal/platforms/wiring/hal_time_provider.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/hal/platforms/wiring/hal_time_provider.cpp[0m
+[33mIn file included from src/hal/platforms/wiring/../../hal_time_provider.h:21:0,[0m
+[33mfrom src/hal/platforms/wiring/hal_time_provider.cpp:18:[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/hal/platforms/wiring/../../../common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/plugins/ping/ping.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/plugins/ping/ping.c[0m
+[33mIn file included from src/plugins/ping/ping.h:22:0,[0m
+[33mfrom src/plugins/ping/ping.c:18:[0m
+[33msrc/plugins/ping/../../common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/plugins/ping/../../common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/plugins/smart_echo/smart_echo.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/plugins/smart_echo/smart_echo.c[0m
+[33mIn file included from src/plugins/smart_echo/smart_echo.h:22:0,[0m
+[33mfrom src/plugins/smart_echo/smart_echo.c:19:[0m
+[33msrc/plugins/smart_echo/../../common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/plugins/smart_echo/../../common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-gcc -o .pioenvs/msp430/src/sa_bodypart_list.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/sa_bodypart_list.c[0m
+[33mIn file included from src/common/sa_bodypart_list_common.h:22:0,[0m
+[33mfrom src/sa_bodypart_list.h:27,[0m
+[33mfrom src/sa_bodypart_list.c:23:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+[33msrc/sa_bodypart_list.c:36:1: warning: 'progmem' attribute directive ignored [-Wattributes][0m
+msp430-gcc -o .pioenvs/msp430/src/sa_main.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/sa_main.c[0m
+[33mIn file included from src/sa_main.c:19:0:[0m
+[33msrc/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+[33msrc/sa_main.c:35:1: warning: 'progmem' attribute directive ignored [-Wattributes][0m
+msp430-gcc -o .pioenvs/msp430/src/test_counters.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -DPLATFORMIO=020200 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash src/test_counters.c[0m
+[33mIn file included from src/test_counters.c:19:0:[0m
+[33msrc/../../firmware/src/common/sa_common.h:46:0: warning: "true" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:40:0: note: this is the location of the previous definition[0m
+[33msrc/../../firmware/src/common/sa_common.h:47:0: warning: "false" redefined [enabled by default][0m
+[33m.pioenvs/msp430/FrameworkEnergia/Energia.h:41:0: note: this is the location of the previous definition[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/HardwareSerial.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/HardwareSerial.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/IPAddress.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/IPAddress.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/MACAddress.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/MACAddress.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/Print.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/Print.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/Stream.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/Stream.cpp[0m
+[33m.pioenvs/msp430/FrameworkEnergia/Stream.cpp: In member function 'bool Stream::find(char*)':[0m
+[33m.pioenvs/msp430/FrameworkEnergia/Stream.cpp:78:30: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings][0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/TimerSerial.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/TimerSerial.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/Tone.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/Tone.cpp[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/WInterrupts.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/WInterrupts.c[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/WMath.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/WMath.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/WString.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/WString.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/Wire.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/Wire.cpp[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/atof.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/atof.c[0m
+[33m.pioenvs/msp430/FrameworkEnergia/atof.c: In function 'atof':[0m
+[33m.pioenvs/msp430/FrameworkEnergia/atof.c:71:9: warning: floating constant exceeds range of 'double' [-Woverflow][0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/avr/dtostrf.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/avr/dtostrf.c[0m
+[33m.pioenvs/msp430/FrameworkEnergia/avr/dtostrf.c: In function 'dtostrf':[0m
+[33m.pioenvs/msp430/FrameworkEnergia/avr/dtostrf.c:36:3: warning: incompatible implicit declaration of built-in function 'sprintf' [enabled by default][0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/itoa.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/itoa.c[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/main.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/main.cpp[0m
+msp430-g++ -o .pioenvs/msp430/FrameworkEnergia/new.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/new.cpp[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/random.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/random.c[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/twi.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/twi.c[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/usci_isr_handler.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/usci_isr_handler.c[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/wiring.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/wiring.c[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/wiring_analog.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/wiring_analog.c[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/wiring_digital.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/wiring_digital.c[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/wiring_pulse.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/wiring_pulse.c[0m
+msp430-gcc -o .pioenvs/msp430/FrameworkEnergia/wiring_shift.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant .pioenvs/msp430/FrameworkEnergia/wiring_shift.c[0m
+msp430-ar rcs .pioenvs/msp430/libFrameworkEnergia.a .pioenvs/msp430/FrameworkEnergia/HardwareSerial.o .pioenvs/msp430/FrameworkEnergia/IPAddress.o .pioenvs/msp430/FrameworkEnergia/MACAddress.o .pioenvs/msp430/FrameworkEnergia/Print.o .pioenvs/msp430/FrameworkEnergia/Stream.o .pioenvs/msp430/FrameworkEnergia/TimerSerial.o .pioenvs/msp430/FrameworkEnergia/Tone.o .pioenvs/msp430/FrameworkEnergia/WInterrupts.o .pioenvs/msp430/FrameworkEnergia/WMath.o .pioenvs/msp430/FrameworkEnergia/WString.o .pioenvs/msp430/FrameworkEnergia/Wire.o .pioenvs/msp430/FrameworkEnergia/atof.o .pioenvs/msp430/FrameworkEnergia/avr/dtostrf.o .pioenvs/msp430/FrameworkEnergia/itoa.o .pioenvs/msp430/FrameworkEnergia/main.o .pioenvs/msp430/FrameworkEnergia/new.o .pioenvs/msp430/FrameworkEnergia/random.o .pioenvs/msp430/FrameworkEnergia/twi.o .pioenvs/msp430/FrameworkEnergia/usci_isr_handler.o .pioenvs/msp430/FrameworkEnergia/wiring.o .pioenvs/msp430/FrameworkEnergia/wiring_analog.o .pioenvs/msp430/FrameworkEnergia/wiring_digital.o .pioenvs/msp430/FrameworkEnergia/wiring_pulse.o .pioenvs/msp430/FrameworkEnergia/wiring_shift.o[0m
+msp430-ranlib .pioenvs/msp430/libFrameworkEnergia.a[0m
+msp430-g++ -o .pioenvs/msp430/MspFlash/MspFlash.o -c -g -Os -ffunction-sections -fdata-sections -MMD -mmcu=msp430g2553 -DF_CPU=16000000L -DSA_PLATFORM_WIRING -DARDUINO=101 -DENERGIA=15 -I.pioenvs/msp430/FrameworkEnergia -I.pioenvs/msp430/FrameworkEnergiaVariant -I.pioenvs/msp430/MspFlash .pioenvs/msp430/MspFlash/MspFlash.cpp[0m
+msp430-ar rcs .pioenvs/msp430/libMspFlash.a .pioenvs/msp430/MspFlash/MspFlash.o[0m
+msp430-ranlib .pioenvs/msp430/libMspFlash.a[0m
+msp430-gcc -o .pioenvs/msp430/firmware.elf -Os -mmcu=msp430g2553 -Wl,-gc-sections,-u,main .pioenvs/msp430/src/common/sa_aes_128.o .pioenvs/msp430/src/common/sa_eax_128.o .pioenvs/msp430/src/common/sa_eeprom.o .pioenvs/msp430/src/common/saccp_protocol.o .pioenvs/msp430/src/common/sagdp_protocol.o .pioenvs/msp430/src/common/saoudp_protocol.o .pioenvs/msp430/src/common/sasp_protocol.o .pioenvs/msp430/src/common/zepto_big_num.o .pioenvs/msp430/src/common/zepto_mem_mngmt.o .pioenvs/msp430/src/hal/platforms/wiring/hal_commlayer.o .pioenvs/msp430/src/hal/platforms/wiring/hal_eeprom.o .pioenvs/msp430/src/hal/platforms/wiring/hal_main.o .pioenvs/msp430/src/hal/platforms/wiring/hal_time_provider.o .pioenvs/msp430/src/plugins/ping/ping.o .pioenvs/msp430/src/plugins/smart_echo/smart_echo.o .pioenvs/msp430/src/sa_bodypart_list.o .pioenvs/msp430/src/sa_main.o .pioenvs/msp430/src/test_counters.o -L.pioenvs/msp430 -Wl,--start-group -lm .pioenvs/msp430/libFrameworkEnergia.a .pioenvs/msp430/libMspFlash.a -Wl,--end-group[0m
+msp430-objcopy -O ihex -R .eeprom .pioenvs/msp430/firmware.elf .pioenvs/msp430/firmware.hex[0m
+"msp430-size" -B -d .pioenvs/msp430/firmware.elf[0m
+text	   data	    bss	    dec	    hex	filename[0m
+14846	      0	    430	  15276	   3bac	.pioenvs/msp430/firmware.elf[0m
+======================== [[32m[1mSUCCESS[0m] Took 153.29 seconds ========================
+travis_time:end:0340eace:start=1435070127309366053,finish=1435070360807295029,duration=233497928976
+[0K
+[32;1mThe command "eval $SA_BASH_CMD" exited with 0.[0m
+
+Done. Your build exited with 0.
