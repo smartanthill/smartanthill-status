@@ -448,7 +448,7 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'cdn',
+    // 'cdn',
     'ngtemplates',
     'fixtplsrev'
   ]);
