@@ -14,6 +14,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 import click
+import requests
 
 from smartanthill_status import __version__
 from smartanthill_status.database import create_all
@@ -47,6 +48,9 @@ def runserver():
 
 
 def main():
+    # https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning
+    requests.packages.urllib3.disable_warnings()
+
     cli()
 
 
