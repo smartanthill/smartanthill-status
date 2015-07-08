@@ -1,0 +1,131 @@
+/**
+  Copyright (C) 2015 OLogN Technologies AG
+
+  This source file is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License version 2
+  as published by the Free Software Foundation.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+@media screen and (max-width: 992px) {
+  .collapse {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.jumbotron h1, .text-shadow {
+  text-shadow: 3px 2px 0px gray, 7px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.jumbotron h1 small {
+  text-shadow: none;
+}
+
+.page-header {
+  margin-top: 20px;
+}
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-nav .fa {
+  margin-right: 5px;
+}
+
+.navbar-header .navbar-brand {
+  color: #e0e0e0;
+}
+
+.navbar-nav .btn-group .btn-main {
+  padding-right: 3px;
+}
+
+.navbar-nav .btn-group .btn {
+  border: 0;
+  border-radius: 0;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  border-color: #080808;
+}
+
+.header-underlined {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.footer {
+  padding: 20px;
+}
+
+.footer .brands:hover,
+.footer .brands:focus {
+  text-decoration: none;
+}
+
+/* Home */
+
+.home h1 {
+  font-size: 30px;
+  text-shadow: none;
+}
+
+.home .btn-lg {
+  padding: 15px 30px;
+  margin: 10px;
+}
+
+.home .top-banner h2 {
+  font-weight: normal;
+}
+
+.home .top-banner .img-circle {
+  background-color: #c0c0c0;
+  width: 140px;
+  height: 140px;
+  padding-top: 30px;
+}
+
+.home .top-banner .img-circle:hover {
+  background-color: #d3d3d3;
+}
+
+.home-divider {
+  margin: 80px 0;
+}
+
+.home .main-featurette h2 {
+  font-size: 40px;
+}
+
+.nav-pills .active a {
+  color: #fff;
+}
+
+.jumbotron .addthis_32x32_style {
+  min-height: 32px;
+}
+
+#embedded-links {
+  margin-top: .75em;
+}

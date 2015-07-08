@@ -1,0 +1,36 @@
+<view-title>Embedded</view-title>
+<!--<meta name="description" content="SmartAnthill Embedded status" view-head />-->
+<!--<meta name="keywords" content="smartanthill, embedded, ci" view-head />-->
+
+<div class="container">
+  <div class="text-center">
+    <div id="embedded-links" class="btn-group text-center">
+      <a ng-class="{active: env == vm.envName}" class="btn btn-primary" ng-repeat="env in vm.envs" href="#!/embedded/{{ env }}">{{ env }}</a>
+    </div>
+  </div>
+  <div>
+    <h3>{{ config.env }}</h3>
+    <canvas id="vm.chartConfig.env"
+            class="chart chart-line"
+            data="vm.chartConfig.data"
+            labels="vm.chartConfig.labels"
+            legend="true"
+            series="vm.chartConfig.series">
+    </canvas>
+  </div>
+  <table class="table" ng-show="vm.singleEnv">
+    <tr>
+      <th>Build</th>
+      <th>RAM</th>
+      <th>ROM</th>
+    </tr>
+    <tr ng-repeat="record in vm.tableData">
+      <td><a href="https://travis-ci.org/smartanthill/smartanthill2_0-embedded/builds/{{ record.build_id }}">
+        {{ record.build_id }}
+      </a></td>
+      <td>{{ record.ram }}</td>
+      <td>{{ record.rom }}</td>
+    </tr>
+
+  </table>
+</div>

@@ -22,7 +22,7 @@ from smartanthill_status import (
 setup(
     name=__title__,
     version=__version__,
-    packages=['smartanthill_status', 'smartanthill_status.settings'],
+    packages=['smartanthill_status'],
     url=__url__,
     license=__license__,
     author=__author__,

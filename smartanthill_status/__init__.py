@@ -12,6 +12,9 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+import os
+import json
+
 
 __version__ = "0.0.1"
 
@@ -24,3 +27,32 @@ __email__ = "info@o-log-n.com"
 
 __license__ = "GNU GPL v2.0"
 __copyright__ = "Copyright (c) 2015, OLogN Technologies AG"
+
+
+def _get_user_agent():
+    result = "smartanthill_status/%s" % __version__
+    try:
+        import requests
+        result += " %s" % requests.utils.default_user_agent()
+    except ImportError:
+        pass
+    return result
+
+
+config = dict(
+    SQLALCHEMY_DATABASE_URI=None,
+    HEADERS={
+        'User-Agent': _get_user_agent(),
+        'Accept': "application/vnd.travis-ci.2+json",
+    },
+    REPO_BASE_URI="https://api.travis-ci.org/repos/"
+                  "smartanthill/smartanthill2_0-embedded",
+    JOB_LOG_URL="https://s3.amazonaws.com/archive.travis-ci.org"
+                "/jobs/%(job_id)s/log.txt",
+    DEBUG=False,
+    API_CORS_ORIGIN="*",
+)
+
+assert "SMARTANTHILL_STATUS_CONFIG_PATH" in os.environ
+with open(os.environ.get("SMARTANTHILL_STATUS_CONFIG_PATH")) as f:
+    config.update(json.load(f))

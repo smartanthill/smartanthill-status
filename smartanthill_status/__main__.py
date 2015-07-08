@@ -19,6 +19,7 @@ from smartanthill_status import __version__
 from smartanthill_status.database import create_all
 from smartanthill_status.travis_log_parser import \
     parse_latest_builds_statistics
+from smartanthill_status.web import app
 
 
 @click.group()
@@ -38,6 +39,11 @@ def syncdb():
 @cli.command()
 def embedded_build_stats():
     parse_latest_builds_statistics()
+
+
+@cli.command()
+def runserver():
+    app.run(reloader=True)
 
 
 def main():

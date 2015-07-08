@@ -15,13 +15,14 @@
 
 import logging
 import re
+from datetime import datetime
 
 from requests.sessions import Session
 from sqlalchemy.sql.expression import exists
 
+from smartanthill_status import config
 from smartanthill_status.database import db_session
 from smartanthill_status.models import BuildStatistics
-from smartanthill_status.settings import HEADERS, JOB_LOG_URL, REPO_BASE_URI
 from smartanthill_status.utils import iter_lines, rollback_on_exception
 
 logger = logging.getLogger(__name__)
@@ -154,8 +155,8 @@ def parse_log_file(filename):
 
 def parse_latest_builds_statistics():
     requests_session = Session()
-    requests_session.headers.update(HEADERS)
-    response = requests_session.get(REPO_BASE_URI + "/builds",
+    requests_session.headers.update(config['HEADERS'])
+    response = requests_session.get(config['REPO_BASE_URI'] + "/builds",
                                     params={'event_type': "push"}).json()
     commits = {commit['id']: commit for commit in response['commits']}
 
@@ -172,13 +173,17 @@ def parse_latest_builds_statistics():
                     or build_exists_in_database(build):
                 continue
             job_id = build['job_ids'][0]
-            log = requests_session.get(JOB_LOG_URL % {'job_id': job_id},
-                                       stream=True)
+            log = requests_session.get(
+                config['JOB_LOG_URL'] % {'job_id': job_id},stream=True)
             log_parser = LogParser(log)
             records = log_parser.parse()
             for record in records:
                 record.build_id = build['id']
                 record.job_id = job_id
+                record.committed_at = datetime.strptime(
+                    commits[build['commit_id']]['committed_at'],
+                    "%Y-%m-%dT%H:%M:%SZ"
+                )
             db_session.add_all(records)
             db_session.commit()
             logger.debug('%s statistics records saved.' % len(records))

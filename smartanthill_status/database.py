@@ -20,10 +20,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.pool import NullPool
 
-from smartanthill_status.settings import DATABASE_URI
+from smartanthill_status import config
 
-
-engine = create_engine(DATABASE_URI, poolclass=NullPool)
+engine = create_engine(config['SQLALCHEMY_DATABASE_URI'], poolclass=NullPool)
 engine.execute("SET time_zone = '+00:00'")
 
 db_session = scoped_session(

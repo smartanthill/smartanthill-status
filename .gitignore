@@ -5,3 +5,4 @@ dist/
 .coverage
 *.pyc
 .tox/
+local_config.json

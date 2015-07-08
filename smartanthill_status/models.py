@@ -25,6 +25,11 @@ class BuildStatistics(Base):
 
     build_id = Column(INTEGER(unsigned=True), nullable=False)
     job_id = Column(INTEGER(unsigned=True), nullable=False)
+
     env = Column(String(10), nullable=False)
     rom = Column(INTEGER(unsigned=True), nullable=False)
     ram = Column(INTEGER(unsigned=True), nullable=False)
+
+    def to_dict(self):
+        return {key: getattr(self, key)
+                for key in ['build_id', 'rom', 'ram', 'env']}
