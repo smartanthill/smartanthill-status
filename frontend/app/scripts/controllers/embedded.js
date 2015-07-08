@@ -64,6 +64,9 @@
       vm.chartConfig['data'].push(rom_usage)
     });
     vm.chartConfig['labels'] = builds
+    vm.chartConfig['options'] = {
+      "multiTooltipTemplate": "<%=datasetLabel%>: <%= value %> bytes"
+    }
 
     ////////////
 
