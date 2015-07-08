@@ -14,6 +14,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 import os
 import json
+import logging
 
 
 __version__ = "0.0.1"
@@ -51,8 +52,11 @@ config = dict(
                 "/jobs/%(job_id)s/log.txt",
     DEBUG=False,
     API_CORS_ORIGIN="*",
+    LOGGING=dict(version=1),
 )
 
 assert "SMARTANTHILL_STATUS_CONFIG_PATH" in os.environ
 with open(os.environ.get("SMARTANTHILL_STATUS_CONFIG_PATH")) as f:
     config.update(json.load(f))
+
+logging.config.dictConfig(config['LOGGING'])

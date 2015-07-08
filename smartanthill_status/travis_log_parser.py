@@ -26,7 +26,6 @@ from smartanthill_status.models import BuildStatistics
 from smartanthill_status.utils import iter_lines, rollback_on_exception
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.DEBUG)
 
 
 BEGINNING_OF_LINE_WITH_ENV_NAME_REGEX = \
