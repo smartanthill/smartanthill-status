@@ -15,6 +15,7 @@
 import os
 import json
 import logging
+import logging.config
 
 
 __version__ = "0.0.1"
@@ -59,4 +60,5 @@ assert "SMARTANTHILL_STATUS_CONFIG_PATH" in os.environ
 with open(os.environ.get("SMARTANTHILL_STATUS_CONFIG_PATH")) as f:
     config.update(json.load(f))
 
+logging.getLogger(__name__).addHandler(logging.NullHandler())
 logging.config.dictConfig(config['LOGGING'])
