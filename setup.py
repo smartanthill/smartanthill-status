@@ -37,7 +37,7 @@ setup(
         "click",
         "bottle",
         "SQLAlchemy",
-        "mysql-connector-python",
+        "MySQL-python",
         "requests",
     ],
 )
