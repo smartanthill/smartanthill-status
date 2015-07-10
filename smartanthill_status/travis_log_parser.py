@@ -167,10 +167,10 @@ def parse_latest_builds_statistics():
             BuildStatistics.build_id == build['id'])).scalar()
 
     for build in response['builds']:
+        if not build_is_from_develop_branch(build) \
+                or build_exists_in_database(build):
+            continue        
         with rollback_on_exception(db_session, logger):
-            if not build_is_from_develop_branch(build) \
-                    or build_exists_in_database(build):
-                continue
             job_id = build['job_ids'][0]
             log = requests_session.get(
                 config['JOB_LOG_URL'] % {'job_id': job_id},stream=True)
