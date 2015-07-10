@@ -11,6 +11,11 @@ from smartanthill_status.models import BuildStatistics
 app = Bottle()
 
 
+@app.hook("after_request")
+def db_disconnect():
+    db_session.close()
+
+
 def _response(obj):
     response.set_header("Access-Control-Allow-Origin",
                         config['API_CORS_ORIGIN'])
