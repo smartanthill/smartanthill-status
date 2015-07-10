@@ -13,7 +13,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-from sqlalchemy import Column, String
+from sqlalchemy import Column, DateTime, String
 from sqlalchemy.dialects.mysql import INTEGER
 
 from smartanthill_status.database import Base
@@ -25,11 +25,14 @@ class BuildStatistics(Base):
 
     build_id = Column(INTEGER(unsigned=True), nullable=False)
     job_id = Column(INTEGER(unsigned=True), nullable=False)
+    committed_at = Column(DateTime, nullable=False)
 
     env = Column(String(10), nullable=False)
     rom = Column(INTEGER(unsigned=True), nullable=False)
     ram = Column(INTEGER(unsigned=True), nullable=False)
 
     def to_dict(self):
-        return {key: getattr(self, key)
-                for key in ['build_id', 'rom', 'ram', 'env']}
+        d = {key: getattr(self, key)
+             for key in ['build_id', 'rom', 'ram', 'env']}
+        d['committed_at'] = self.committed_at.isoformat()
+        return d

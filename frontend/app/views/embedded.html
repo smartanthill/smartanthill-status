@@ -22,6 +22,7 @@
   <table class="table" ng-show="vm.singleEnv">
     <tr>
       <th>Build</th>
+      <th>Committed at</th>
       <th>RAM</th>
       <th>ROM</th>
     </tr>
@@ -29,6 +30,7 @@
       <td><a href="https://travis-ci.org/smartanthill/smartanthill2_0-embedded/builds/{{ record.build_id }}">
         {{ record.build_id }}
       </a></td>
+      <td>{{ record.committed_at}}</td>
       <td>{{ record.ram }}</td>
       <td>{{ record.rom }}</td>
     </tr>
