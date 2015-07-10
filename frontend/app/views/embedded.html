@@ -9,13 +9,24 @@
     </div>
   </div>
   <div>
-    <h3>{{ config.env }}</h3>
-    <canvas id="vm.chartConfig.env"
+    <h3>RAM</h3>
+    <canvas id="vm.chartConfig.ram.env'-ram'"
             class="chart chart-line"
-            data="vm.chartConfig.data"
+            data="vm.chartConfig.ram.data"
             labels="vm.chartConfig.labels"
             legend="true"
-            series="vm.chartConfig.series"
+            series="vm.chartConfig.ram.series"
+            options="vm.chartConfig.options">
+    </canvas>
+  </div>
+  <div>
+    <h3>ROM</h3>
+    <canvas id="vm.chartConfig.rom.env'-rom'"
+            class="chart chart-line"
+            data="vm.chartConfig.rom.data"
+            labels="vm.chartConfig.labels"
+            legend="true"
+            series="vm.chartConfig.rom.series"
             options="vm.chartConfig.options">
     </canvas>
   </div>

@@ -27,8 +27,14 @@
 
     vm.envs = embeddedEnvironmentsList;
     vm.chartConfig = {
-      'series': [],
-      'data': [],
+      'ram': {
+        'series': [],
+        'data': []
+      },
+      'rom': {
+        'series': [],
+        'data': []
+      }
     }
 
     vm.envName = $route.current.params.envName;
@@ -58,10 +64,10 @@
         ram_usage[builds.indexOf(record.build_id)] = record.ram;
         rom_usage[builds.indexOf(record.build_id)] = record.rom;
       }
-      vm.chartConfig['series'].push(envName + ' RAM usage')
-      vm.chartConfig['data'].push(ram_usage)
-      vm.chartConfig['series'].push(envName + ' ROM usage')
-      vm.chartConfig['data'].push(rom_usage)
+      vm.chartConfig['ram']['series'].push(envName + ' RAM usage')
+      vm.chartConfig['ram']['data'].push(ram_usage)
+      vm.chartConfig['rom']['series'].push(envName + ' ROM usage')
+      vm.chartConfig['rom']['data'].push(rom_usage)
     });
     vm.chartConfig['labels'] = builds
     vm.chartConfig['options'] = {
