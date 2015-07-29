@@ -36,5 +36,6 @@ def embedded_envs():
 def embedded_build_memory_consumption(env):
     qs = db_session.query(BuildStatistics)\
         .filter(BuildStatistics.env == env)\
+        .order_by(BuildStatistics.id.desc())\
         .limit(25)
     return _response([bs.to_dict() for bs in qs])
