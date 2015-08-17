@@ -112,7 +112,8 @@ class LogParser(object):
                 elif OTHER_MEMORY_USAGE_BLOCK_REGEX.match(line):
                     self.state = States.IN_OTHER_MEMORY_USAGE_BLOCK
 
-                elif BLOCK_END_LINE_REGEX.match(line):
+                elif BLOCK_END_LINE_REGEX.match(line) or \
+                        "The build has been terminated" in line:
                     self.state = States.NOT_IN_BLOCK
                     self.env = None
                     if 'SUCCESS' in line:
@@ -169,7 +170,7 @@ def parse_latest_builds_statistics():
     for build in response['builds']:
         if not build_is_from_develop_branch(build) \
                 or build_exists_in_database(build):
-            continue        
+            continue
         with rollback_on_exception(db_session, logger):
             job_id = build['job_ids'][0]
             log = requests_session.get(

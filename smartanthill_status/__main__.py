@@ -18,8 +18,8 @@ import requests
 
 from smartanthill_status import __version__
 from smartanthill_status.database import create_all
-from smartanthill_status.travis_log_parser import \
-    parse_latest_builds_statistics
+from smartanthill_status.travis_log_parser import (
+    parse_latest_builds_statistics, parse_log_file)
 from smartanthill_status.web import app
 
 
@@ -45,6 +45,12 @@ def embedded_build_stats():
 @cli.command()
 def runserver():
     app.run(reloader=True)
+
+
+@cli.command()
+@click.argument("file_path")
+def parse_file(file_path):
+    parse_log_file(file_path)
 
 
 def main():
