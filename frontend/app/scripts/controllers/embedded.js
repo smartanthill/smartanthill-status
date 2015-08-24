@@ -35,19 +35,19 @@
         'series': [],
         'data': []
       }
-    }
+    };
 
     vm.envName = $route.current.params.envName;
-    vm.singleEnv = buildStatistics.length == 1;
+    vm.singleEnv = buildStatistics.length === 1;
     if (vm.singleEnv){
       vm.tableData = buildStatistics[0];
     }
 
-    var builds = [], build_id;
-    for (var env in buildStatistics){
-      for (var i = 0; i < buildStatistics[env].length; i++){
+    var builds = [], build_id, i;
+    for (var env in buildStatistics) {
+      for (i = 0; i < buildStatistics[env].length; i++) {
         build_id = buildStatistics[env][i].build_id;
-        if (!_arrayContains(builds, build_id)){
+        if (!_arrayContains(builds, build_id)) {
           builds.push(build_id);
         }
       }
@@ -56,36 +56,36 @@
 
     var envName, ram_usage, rom_usage, record;
     angular.forEach(buildStatistics, function(envStatistics){
-      envName = envStatistics[0]['env']
+      envName = envStatistics[0]['env'];
       ram_usage = _initArray(builds.length);
       rom_usage = _initArray(builds.length);
-      for (var i in envStatistics){
+      for (i = 0; i < envStatistics.length; i++) {
         record = envStatistics[i];
         ram_usage[builds.indexOf(record.build_id)] = record.ram;
         rom_usage[builds.indexOf(record.build_id)] = record.rom;
       }
-      vm.chartConfig['ram']['series'].push(envName + ' RAM usage')
-      vm.chartConfig['ram']['data'].push(ram_usage)
-      vm.chartConfig['rom']['series'].push(envName + ' ROM usage')
-      vm.chartConfig['rom']['data'].push(rom_usage)
+      vm.chartConfig['ram']['series'].push(envName + ' RAM usage');
+      vm.chartConfig['ram']['data'].push(ram_usage);
+      vm.chartConfig['rom']['series'].push(envName + ' ROM usage');
+      vm.chartConfig['rom']['data'].push(rom_usage);
     });
-    vm.chartConfig['labels'] = builds
+    vm.chartConfig['labels'] = builds;
     vm.chartConfig['options'] = {
-      "multiTooltipTemplate": "<%=datasetLabel%>: <%= value %> bytes"
-    }
+      'multiTooltipTemplate': '<%=datasetLabel%>: <%= value %> bytes'
+    };
 
     ////////////
 
-    function _initArray(size){
+    function _initArray(size) {
       var arr = [];
-      for (var i = 0; i < size; i++){
+      for (i = 0; i < size; i++) {
         arr[i] = 0;
       }
       return arr;
     }
 
-    function _arrayContains(arr, value){
-      return arr.indexOf(value) != -1;
+    function _arrayContains(arr, value) {
+      return arr.indexOf(value) !== -1;
     }
   }
 })();

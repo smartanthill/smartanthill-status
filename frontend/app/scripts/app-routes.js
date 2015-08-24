@@ -41,7 +41,9 @@
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html'
+        templateUrl: 'views/home.html',
+        controller: 'HomeController',
+        controllerAs: 'vm',
       })
       .when('/embedded/:envName?', {
         templateUrl: 'views/embedded.html',
